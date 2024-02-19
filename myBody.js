@@ -74,7 +74,12 @@ document.addEventListener("DOMContentLoaded", function () {
     imc = calculImc(taille, poids);
     strong = calculForce(maxPompes, maxTractions, imc);
     console.log(strong);
-    if (maxPompes && maxTractions) {
+    if (
+      maxPompes &&
+      maxTractions &&
+      !isNaN(maxPompes) &&
+      !isNaN(maxTractions)
+    ) {
       if (strong >= 23 && strong <= 55) {
         number = "NORMAL";
         caseNumber.style.backgroundColor = "green";
@@ -103,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Max Tractions:", maxTractions);
     if (isNaN(imc)) imc = 0.0;
     document.getElementById("res").innerText = imc;
-    if (taille && poids) {
+    if (taille && poids && !isNaN(taille) && !isNaN(poids)) {
       if (imc > 25 && imc <= 30) {
         situation = "SURPOIDS";
         caseSituation.style.backgroundColor = "orange";
