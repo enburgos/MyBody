@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="myBody.css" />
+    <title>MyBody</title>
+  </head>
+  <body>
+    <div class="background">
+      <img src="/myBody/IMG/imgMyBody.png" alt="img" />
+        <div class="case-info">
+            <div class="taille">
+                <p>TAILLE :</p>
+                <input type="text" placeholder="ex:170" id="taille">
+            </div>
+            <div class="poids">
+                <p>POIDS :</p>
+                <input type="text" placeholder="ex:80" id="poids">
+            </div>
+
+        </div>
+        <div class="case-power">
+            <div class="pompes">
+                <p>MAX POMPES :</p>
+                <input type="text" placeholder="ex:12" id="pompes">
+            </div>
+            <div class="tractions">
+                <p>MAX TRACTIONS :</p>
+                <input type="text" placeholder="ex:4" id="tractions">
+            </div>
+        </div>
+        <div class="case-result">
+          <div class="result1">
+            <p class="imc">IMC</p>
+            <p class="numberImc" id="res">0.0</p>
+            <p class="situation" id="situation"></p>
+          </div>
+          <div class="result2">
+            <p class="strong">VOTRE FORCE EST:</p>
+            <p class="vide"></p>
+            <p class="number" id="number"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="myBody.js"></script>
+  </body>
+</html>
